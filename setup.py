@@ -35,7 +35,13 @@ def main():
         author='neptune.ai',
         support='contact@neptune.ai',
         author_email='contact@neptune.ai',
-        url="https://github.com/neptune-ai/neptune-sacred",
+        # package url management: https://stackoverflow.com/a/56243786/1565454
+        url="https://neptune.ai/",
+        project_urls={
+            'Tracker': 'https://github.com/neptune-ai/neptune-integration-template/issues',  # TODO: update
+            'Source': 'https://github.com/neptune-ai/neptune-integration-template',  # TODO: update
+            'Documentation': 'https://docs.neptune.ai/integrations-and-supported-tools/model-training/',  # TODO: update
+        },
         long_description=readme,
         long_description_content_type="text/markdown",
         license='Apache License 2.0',
