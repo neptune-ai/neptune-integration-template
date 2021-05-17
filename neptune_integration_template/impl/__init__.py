@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+__all__ = [
+    # TODO: add importable public names here, `neptune-client` uses `import *`
+    # https://docs.python.org/3/tutorial/modules.html#importing-from-a-package
+]
+
+# TODO: use `warnings.warn` for user caused problems: https://stackoverflow.com/a/14762106/1565454
 import warnings
 
 try:
