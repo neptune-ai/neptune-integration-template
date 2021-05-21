@@ -31,4 +31,8 @@ except ImportError:
     import neptune
     from neptune.internal.utils import verify_type
 
+from neptune_integration_template import __version__  # TODO: change module name
+
+INTEGRATION_VERSION_KEY = 'source_code/integrations/integration-template'  # TODO: change path
+
 # TODO: Implementation of neptune-integration here
