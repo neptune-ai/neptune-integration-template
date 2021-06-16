@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup
 
-from neptune_integration_template._version import get_versions  # TODO: update path
+import versioneer
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
             if line.startswith('Version:'):
                 version = line[8:].strip()
     else:
-        version = get_versions()["version"]
+        version = versioneer.get_version()
 
     setup(
         name='neptune-integration-template',  # TODO: update package name to `neptune-*`
@@ -48,6 +48,7 @@ def main():
         install_requires=base_libs,
         extras_require=extras,
         packages=['neptune_integration_template', 'neptune_integration_template.impl'],  # TODO: Update package name
+        cmdclass=versioneer.get_cmdclass(),
         zip_safe=False,
         classifiers=[
             # As from http://pypi.python.org/pypi?%3Aaction=list_classifiers
