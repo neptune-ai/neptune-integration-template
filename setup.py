@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 import versioneer
 
@@ -47,7 +47,7 @@ def main():
         license='Apache License 2.0',
         install_requires=base_libs,
         extras_require=extras,
-        packages=['neptune_integration_template', 'neptune_integration_template.impl'],  # TODO: Update package name
+        packages=find_packages(),
         cmdclass=versioneer.get_cmdclass(),
         zip_safe=False,
         classifiers=[
