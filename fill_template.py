@@ -1,13 +1,14 @@
-from pathlib import Path
-import sys
-import os
-from jinja2 import Template
 import argparse
+import os
+from pathlib import Path
+
+from jinja2 import Template
+
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--short_name", type=str, required=True)
+    parser.add_argument("short_name", type=str)
     parser.add_argument("--full_name", type=str)
     parser.add_argument("--package_name", type=str)
     parser.add_argument("--package_directory", type=str)
