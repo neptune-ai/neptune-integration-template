@@ -1,7 +1,8 @@
 import argparse
 import os
-from pathlib import Path
 import subprocess
+import sys
+from pathlib import Path
 
 from jinja2 import Template
 
@@ -85,3 +86,5 @@ if __name__ == "__main__":
 
     print(run.stdout.decode("utf-8"))
     print(run.stderr.decode("utf-8"))
+
+    sys.exit(run.returncode)
