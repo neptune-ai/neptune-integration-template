@@ -15,6 +15,7 @@
 #
 
 __all__ = [
+    "__version__",
     # TODO: add importable public names here, `neptune-client` uses `import *`
     # https://docs.python.org/3/tutorial/modules.html#importing-from-a-package
 ]
